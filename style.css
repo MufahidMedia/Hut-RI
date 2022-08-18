@@ -1,0 +1,66 @@
+body {
+    background: rgb(220, 216, 216);
+  }
+  #flag {
+    position: absolute;
+    top: 85%;
+    left: 74%;
+  }
+  
+  #flag-reverse {
+    position: absolute;
+    top: 85%;
+    right: 58%;
+  }
+  
+  #flag-middle {
+    position: absolute;
+    top: 49%;
+    right: 41%;
+    z-index: -99;
+    animation: slide 16s ease-in forwards;
+  }
+  
+  @keyframes zoom-in {
+    0% {
+      transform: scale(0.3, 0.3);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+  
+  @keyframes slide {
+    0% {
+      position: absolute;
+      top: 80%;
+      right: 41%;
+      z-index: -99;
+      opacity: 0;
+    }
+    100% {
+      position: absolute;
+      top: 47%;
+      right: 41%;
+      z-index: -99;
+      opacity: 100;
+    }
+  }
+  
+  .zoom-in {
+    width: 600px;
+    animation: zoom-in 4s ease-out;
+  }
+  
+  .fade-in {
+    animation: fade-in 6s ease-in;
+  }
